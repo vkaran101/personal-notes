@@ -10,11 +10,14 @@ Templates
         + can be used in the invoked controller function
 Directives
     + apply special behavior
-    + DOM manipulation
+    + used for DOM manipulation
+    + tell AngularJS's HTML compiler to attach specified behavior to that DOM element
     + has different types such as ng-app, ng-repeat, and ng-model
         + ng-model: stores/updates the value of the input field into/from a variable
         + ng-app: initializes the application
         + ng-controller: instantiates new Controller object using its constructor
+    + Angular normalizes an element's tag and attribute name to determine which elements match which directives
+    + Like controllers, directives are measured on modules
 Expressions
     + {{ expression | filter }}
         + will replace evaluated value of expression with the filter in the view
@@ -64,3 +67,27 @@ Data Binding
     + binding is done in the template
     + Beauty of Angular data binding: two way merge between the view and the model
     + controller is independent of the view
+Injectors
+    + injectors instantiate objects and services
+        + injectors need instructions on how to create these objects
+        + there are different ways of specifying this
+        + most common: Provider
+    + Injector Recipes
+        + Value Recipe
+            + assign a value to a service or controller
+        + Factory Recipe
+            + Advantages
+                + ability to user other services (have dependencies)
+                + service initialization
+                + delayed/lazy initialization
+        + Service Recipe
+            + launch an instance of a custom type
+            + ,,,,
+        + Provider Recipe
+            + custom type that implements a get method"
+        + Constant Recipe
+            + ...
+Modules
+    + a module is a container for the different parts of an app
+        + think controllers, services, filters, directives, etc
+    + You can bootstrap your application ta a module
